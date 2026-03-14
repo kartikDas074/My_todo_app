@@ -1,76 +1,125 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My todo app | Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>My todo app|login</title>
+    <!-- Tailwind + Daisy Ui setup -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+     <!-- Font awesome setup -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      
+      <!-- Add Font Geist -->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
 
-    <style>
-        body {
+       <!-- CSS style -->
+     <style>
+    body {
             font-family: 'Geist', sans-serif;
         }
-        .bg-custom {
-            /* ব্যাকগ্রাউন্ড সুন্দর করার জন্য লিনিয়ার গ্রেডিয়েন্ট ওভারলে ব্যবহার করা হয়েছে */
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                        url('assets/back.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+        .navbar{
+               background-color: rgb(186, 165, 165);
         }
-    </style>
-</head>
+        .navbar div p{
+            font-size: 18px;
+            color:#FFFFFF;
+            cursor: pointer;
+        }
+       .navbar div  :hover{
+           color:rgb(30, 30, 149)
+       }
+       .over{
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         border: 1px solid black;
+       }
+</style>
 
-<body class="bg-custom min-h-screen flex items-center justify-center p-4">
-
-    <section class="bg-base-100 shadow-2xl rounded-2xl w-full max-w-md overflow-hidden border-t-8 border-[#68166b]">
-        
-        <div class="p-8 flex flex-col items-center">
-            <div class="flex flex-col items-center mb-6">
-                <img src="assets/logo.jpg" alt="logo" class="h-16 w-16 rounded-full mb-2 object-cover">
-                <h1 class="text-3xl font-bold text-gray-700">My todo <span class="text-[#68166b]">taSk</span></h1>
-                <p class="text-center text-sm text-gray-400 mt-2 px-4">
-                    Track your tasks and boost your growth perfectly.
-                </p>
+<body class=" min-h-screen bg-[#FFFFFF]">
+      <header class="bg-gray-100">
+        <div class=" logo flex justify-between w-[90%] md:w-[80%] mx-auto py-[15px]  items-center bg-gray-100">
+            <div class="">
+                <img class="rounded-[50%] h-[80px] w-[80px]"  src="assets/logo.jpg" alt="log">
             </div>
-
-            <div class="w-full text-left mb-6">
-                <h2 class="text-2xl font-bold text-[#43409d]">Sign in</h2>
+            <div>
+                <h1 class=" font-bold text-[24px] md:text-[30px] text-[#3c0350f5]">My todo <span class=" text-[#68166b]">ta<span class="text-[#f30f0f] font-extrabold">S</span>k</span> </h1>
             </div>
-
-            <form class="w-full space-y-4">
-                <div class="form-control w-full">
-                    <label class="label" for="name">
-                        <span class="label-text font-semibold text-[#6674a1]">Username</span>
-                    </label>
-                    <input type="text" id="name" placeholder="Enter your name" 
-                           class="input input-bordered w-full bg-gray-50 focus:border-[#68166b]" />
-                </div>
-
-                <div class="form-control w-full">
-                    <label class="label" for="password">
-                        <span class="label-text font-semibold text-[#6674a1]">Password</span>
-                    </label>
-                    <input type="password" id="password" placeholder="Enter your password" 
-                           class="input input-bordered w-full bg-gray-50 focus:border-[#68166b]" />
-                </div>
-
-                <button class="btn btn-primary w-full mt-4 bg-[#68166b] border-none hover:bg-[#4d0f4f] text-white">
-                    Sign in
-                </button>
-            </form>
-
-            <p class="mt-6 text-sm text-gray-500">
-                Don't have an account? 
-                <span id="signup" class="text-[#532bc1] font-bold cursor-pointer hover:underline">Sign Up</span>
-            </p>
         </div>
+        <div class="border border-black/10">
+        </div>
+      </header>
+      <section class="navbar ">
+        <div class="w-full max-w-[90vw] md:max-w-[80vw] mx-auto flex justify-start items-center flex-wrap">
         
-    </section>
-
+          <p id="dash" class="px-[10px]">Dashbord</p>
+          <p id="all" class="px-[10px]">All task</p>
+          <p id="analytics" class="px-[10px]">Analytics</p>
+        </div>   
+      </section>
+      <section class=" mt-[20px]">
+        <div>
+            <h1 class="mb-[20px] text-[30px] text-[#3e1a3e] font-bold bg-base-100 w-full max-w-[90vw] md:max-w-[80vw] mx-auto">Statistical overview</h1>
+        </div>
+           <div class="overview w-full max-w-[90vw] md:max-w-[80vw] grid grid-cols-1 md:grid-cols-4 mx-auto gap-[20px]">
+              <div class="flex justify-around items-center px-[10px] md:px-[20px] py-[20px] md:py-[20px] gap-[10px] border-l-4 border-[#091ab9] bg-[#2d3748]">
+                <div class=" ">
+                    <i class="fa-brands fa-accusoft text-[50px] text-[blue]"></i>
+                </div>
+                <div class="flex flex-col justify-center items-center" >
+                    <p class="text-[#FFFFFF] font-bold ">Total task</p>
+                    <p class="text-[#FFFFFF] font-extrabold text-[20px] ">0</p>
+                    <p class="text-[#FFFFFF] font-thin text-center">Overall task</p>
+                </div>
+              </div>
+              <div class="flex justify-around items-center px-[10px] md:px-[20px] py-[20px] md:py-[20px] gap-[10px] border-l-4 border-[#1fc505] bg-[#2d3748]">
+                <div>
+                    <i class="fa-solid fa-file-circle-check  text-[50px] text-[green]"></i>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <p class="text-[#FFFFFF] font-bold ">Completed task</p>
+                    <p class="text-[#FFFFFF] font-extrabold text-[20px] ">0</p>
+                    <p class="text-[#FFFFFF] font-thin text-center">Task mark as finished</p>
+                </div>
+              </div>
+              <div class="flex justify-around items-center px-[10px] md:px-[20px] py-[20px] md:py-[20px] gap-[10px] border-l-4 border-[#e7f33a] bg-[#2d3748]">
+                <div>
+                    <i class="fa-solid fa-hourglass-half  text-[50px] text-[yellow]"></i>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <p class="text-[#FFFFFF] font-bold ">Pending task</p>
+                    <p class="text-[#FFFFFF] font-extrabold text-[20px] ">0</p>
+                    <p class="text-[#FFFFFF] font-thin text-center">Tasks currently incomplete</p>
+                </div>
+              </div>
+              <div class="flex justify-around items-center px-[10px] md:px-[20px] py-[20px] md:py-[20px] gap-[10px] border-l-4 border-[#d81a34] bg-[#2d3748]">
+                <div>
+                    <i class="fa-solid fa-fire-flame-curved  text-[50px] text-[red]"></i>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <p class="text-[#FFFFFF] font-bold ">High Priority task</p>
+                    <p class="text-[#FFFFFF] font-extrabold text-[20px] ">0</p>
+                    <p class="text-[#FFFFFF] font-thin  text-center">Urgent task for today</p>
+                </div>
+              </div>
+           </div>
+           <div>
+            <h1 class="my-[20px] text-[30px] text-[#3e1a3e] font-bold bg-base-100 w-full max-w-[90vw] md:max-w-[80vw] mx-auto">Recent activities</h1>
+        </div>
+        <div class="w-full max-w-[90vw] md:max-w-[80vw] mx-auto bg-[#bfbcbc] shadow-sm py-[10px] px-[5px] rounded-[2px]">
+            <div class="grid grid-cols-4">
+                <h1 class="text-[#3e1a3e] text-[14px] font-semibold">Task</h1>
+                <h1>Catagory</h1>
+                <h1>Status</h1>
+                <h1>Dedline</h1>
+            </div>
+            <hr class="my-[5px]">
+            
+        </div>
+      </section>
 </body>
-</html>
