@@ -39,7 +39,16 @@
          align-items: center;
          border: 1px solid black;
        }
-</style>
+      
+     @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+     }
+     .animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
+     }
+
+     </style>
 
 <body class=" min-h-screen bg-[#FFFFFF]">
       <header class="bg-gray-100">
@@ -213,7 +222,7 @@
       </section>
 
       <!-- Analytics -->
-       <section>
+       <section it="analytics" class="hidden">
         <div class="w-full max-w-[90vw] md:max-w-[80vw] mx-auto border-b border-gray-100 pb-2 my-[20px]">
           <h1 class="text-[20px] md:text-[30px] font-bold text-[#5f8e44] tracking-tight">
           Performance Overview
@@ -385,6 +394,102 @@
         </div>
        </section>
 
+       <!-- Community -->
+       <section class="w-full max-w-[95vw] md:max-w-[80vw] my-[20px] mx-auto">
+           <div class="flex flex-col md:flex-row md:justify-between md:items-center ">
+               <div>
+                   <h1 class="text-[24px] md:text-[34px] font-extrabold text-[#4e2b56] mb-[8px] ">Community Hub</h1>
+                   <p class="text-[15px] md:text-[16px] text-gray-500 italic">Grow together with others</p>
+               </div>
+                  <div>
+                    <button class="btn bg-[#5f8e44] text-[#FFFFFF]  focus">
+                    <i class="fa-solid fa-share-from-square text-[#FFFFFF]"></i>
+                    Share blueprint
+                  </button>
+                  </div>             
+           </div>  
+          <hr class="opacity-[30%] my-[20px]">
+       
+
+      <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-[30px]">
+         <div class="w-full shadow-2xl rounded-[20px] py-[10px] px-[10px] md:px-[20px] md:py-[20px]">
+        <h1 class="text-[24px] text-[#4e2b56] font-bold my-[20px] flex items-center"><i class="fa-solid fa-fire text-orange-500 animate-bounce mx-[8px]"></i> Top performers</h1>
+        <div>
+          <div class="w-full flex justify-between items-center">
+            <div class=" px-[10px] py-[10px]  flex gap-[8px] md:gap-[10px]">
+              <div class="avatar online">
+                  <div class="rounded-full ring ring-[#5f8e44] ring-offset-base-100 ring-offset-2">
+                          <img class="w-[46px] h-[46px] " src="https://api.dicebear.com/7.x/avataaars/svg?seed=Arjun&eyes=happy" alt="Arjun">
+                     </div>
+              </div>
+                     
+                     <div>
+                         <h1 class="font-bold text-[16px] text-[]">Arjun Partho</h1>
+                         <p class="text-[10px]"><i class="fa-solid fa-ranking-star text-orange-400"></i> <span class=" text-green-900 font-semibold">Rank 1</span> </p>
+                     </div>
+            </div>
+            <div class="streak">
+              <p class="text-green-600 font-semibold">20 <i class="fa-solid fa-fire-flame-curved text-orange-600"></i></p>
+            </div>
+       </div>
+       <div class="w-full flex justify-between items-center my-[10px]">
+            <div class=" px-[10px] py-[10px]  flex gap-[8px] md:gap-[10px]">
+              <div class="avatar online">
+                  <div class="rounded-full ring ring-[#5f8e44] ring-offset-base-100 ring-offset-2">
+                          <img class="w-[46px] h-[46px] " src="https://api.dicebear.com/7.x/avataaars/svg?seed=Draupadi&eyes=happy" alt="Draupadi">
+                     </div>
+              </div>
+                     
+                     <div>
+                         <h1 class="font-bold text-[16px] text-[]">Draupadi Sharma</h1>
+                         <p class="text-[10px]"><i class="fa-solid fa-ranking-star text-orange-400"></i> <span class=" text-green-900 font-semibold">Rank 2</span> </p>
+                     </div>
+            </div>
+            <div class="streak">
+              <p class="text-green-600 font-semibold">18 <i class="fa-solid fa-fire-flame-curved text-orange-600"></i></p>
+            </div>
+       </div>
+        </div>
+
+        <button class="btn w-full border-green-500 text-green-500">View Full Leader board</button>
+       </div>
+       <div class="w-full shadow-2xl rounded-[20px] py-[10px] px-[10px] md:px-[20px] md:py-[20px]">
+        <div class="flex justify-start items-center gap-[10px] my-[20px]">
+          <div class="h-[40px] w-[40px] bg-green-500 text-[#FFFFFF]  rounded-[50%] flex justify-center items-center font-extrabold ">
+            A
+           </div>
+           <div>
+            <h1 class="text-[16px] font-bold text-black">Anurika</h1>
+            <p>2hours ago</p>
+           </div>
+        </div>
+           <div class="flex flex-col justify-center items-center">
+              <p class="text-[16px] text-[black]/50 italic">"I finnaly finis my react project with my todo website. Though it is hard but todo website keep me on track."</p>
+             
+           </div>
+            <hr class="opacity-[50%] my-[16px]">
+           <div class="flex my-[16px] justify-start items-center gap-[16px]">
+            <p class=" cursor-pointer"><i class="fa-solid fa-heart text-red-500"></i>2</p>
+            
+            <p class=" cursor-pointer"><i class="fa-solid fa-comment text-[black]"></i> 3</p>
+           </div>
+           <button class="btn btn-neutral w-full">See daily wins of others</button>
+       </div>
+       <div class="w-full shadow-2xl rounded-[20px] py-[10px] px-[10px] md:px-[20px] md:py-[20px]">
+           <div class="my-[20px]">
+            <p class="flex justify-start items-center gap-[7px] text-[#4e2b56] font-bold text-[20px]"><i class="fa-solid fa-earth-africa text-3xl text-blue-400 "></i>Post your Daily wins</p> 
+           </div>
+           <fieldset >
+            <label for="wins">My Today's win</label>
+            <textarea placeholder="Write a comment..." 
+      class="w-full bg-gray-50 rounded-xl p-3 text-sm outline-none focus:ring-2 focus:ring-[#5f8e4433] focus:bg-white transition-all resize-none h-12 focus:h-22 my-[17px]" name="" id="wins" ></textarea>
+           </fieldset>
+           <button class="btn w-full border-blue-400 text-blue-400">Post</button>
+       </div>
+      </div>
+       
+       </section>
+
 
     <section class="bg-neutral ">
            <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10 mt-20 w-full max-w-[90vw] md:max-w-[80vw] mx-auto">
@@ -429,7 +534,5 @@
     </aside>
    </div>
      </section>
-      
-   
-      
+         
 </body>
